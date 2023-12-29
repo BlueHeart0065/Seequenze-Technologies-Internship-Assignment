@@ -1,0 +1,13 @@
+<% layout('boilerplate') %>
+
+<div class="delete-interface">
+    <div class="delete-form-card">
+        <a href="/" class="back"><img src="../images/cross.svg" alt=""></a>
+        <h1>Delete project permanantly?</h1>
+        <div style="margin: 3vw auto 0vw auto;">
+            <form action="/<%= project.id%>?_method=DELETE" method="post"><button style="border: none; background-color: rgb(255, 177, 177);">Delete</button></form>
+            <a href="/" style="text-decoration: none; color: black;"><button style="background-color: rgba(223, 223, 223, 0.678); border: none;">Cancel</button></a>
+        </div>
+        
+    </div>
+</div>

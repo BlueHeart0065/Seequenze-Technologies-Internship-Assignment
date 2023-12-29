@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.new-interface , .edit-interface , .delete-interface , .view-interface{
+    position: fixed;
+    top: 0vw;
+    left: 0vw;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(50, 50, 50, 0.637);
+}
+
+.new-form-card , .new-form-card form , .edit-form-card , .edit-form-card form , .delete-form-card , .delete-form-card form, .view-form-card , .view-form-card form{
+    flex-direction: column;
+}
+
+.new-form-card , .edit-form-card, .delete-form-card, .view-form-card{
+    width: 40vw;
+    background-color: white;
+    height: fit-content;
+    padding: 3vw 5vw 3vw 5vw;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.new-form-card h1 , .edit-form-card h1 , .delete-form-card h1 , .view-form-card h1{
+    margin:  0vw auto 0vw auto;
+}
+
+.new-form-card input , .edit-form-card input , .delete-form-card input, .view-form-card input{
+    border : none;
+    margin: 1vw 0vw 0vw 0vw;
+    border-radius: 10px;
+    height: 2.5vw;
+    background-color: #d2d2d254;
+}
+
+.new-form-card textarea , .edit-form-card textarea , .delete-form-card textarea, .view-form-card textarea{
+    border-radius: 10px;
+    border : none;
+    margin: 1vw 0vw 1vw 0vw;
+    background-color: #d2d2d254;
+
+}
+
+.new-form-card label , .edit-form-card label , .delete-form-card label , .view-form-card label{
+    margin: 2vw 0vw 0vw 0vw;
+}
+
+.new-form-card button , .edit-form-card button , .delete-form-card button , .view-form-card button{
+    border-radius: 10px;
+    border : none;
+    height: fit-content;
+    width: fit-content;
+    padding: 1vw 2vw 1vw 2vw;
+    margin: 1vw auto 0vw auto;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #fa792f54;
+}
+
+.delete-form-card button , .view-form-card button{
+    margin: 0vw 2vw 0vw 2vw;
+}
+
+.back{
+    margin: 0vw;
+    position:relative;
+    left: 40vw;
+}
+
+.back img{
+    height: 2vw;
+    width: 2vw;
+}

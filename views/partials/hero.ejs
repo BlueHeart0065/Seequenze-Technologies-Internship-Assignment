@@ -1,0 +1,34 @@
+<div class="hero">
+    <h1>My Projects</h1>
+
+    <div class="project-layout">
+        <a href="/new">
+            <div class="card">
+                <img src="../images/Create new bg.svg" alt="">
+                Create a new project
+                <p>or try a <span style="color: #FA782F;margin-left: 0.3vw;">sample project</span></p>
+            </div>
+        </a>
+        
+        <% for(let project of projects){ %>
+            <% for(let image of images) {%>
+                <div class="card">
+                    <a href="/<%= project.id %>">
+                        <img src="<%= image.download_url  %>" alt="">
+                    </a>
+                    <div class="project-details">
+                        <div style="flex-direction: column;">
+                            <p class="title"><%= project.title %></p>
+                            <% const creationTime = project.date%>
+                            <% const currentTime = new Date()%>
+                            <% const timeDifference = currentTime - creationTime%>
+                            <% const elapsedTimeInHours = Math.floor(timeDifference / (1000 * 60 * 60));%>
+                            <p class="date"><%= elapsedTimeInHours %> hours ago</p>
+                        </div>
+                        <a href="/<%= project.id  %>/update"><img src="../images/pencil.svg" alt=""></a>
+                        <a href="/<%= project.id  %>/delete"><img src="../images/trash.svg" alt=""></a>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
+    </div>

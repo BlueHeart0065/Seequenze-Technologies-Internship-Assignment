@@ -1,0 +1,15 @@
+<% layout('boilerplate') %>
+
+<div class="edit-interface">
+    <div class="edit-form-card">
+        <a href="/" class="back"><img src="../images/cross.svg" alt=""></a>
+        <h1>Edit Project</h1>
+        <form action="/<%= project.id  %>/update?_method=PUT" method="post">
+            <label for="title">Name of the project</label>
+            <input type="text" id="title" name="title" value="<%= project.title  %>">
+            <label for="creator">Description of the project</label>
+            <textarea name="description" id="description" cols="30" rows="10"><%= project.description  %></textarea>
+            <button>Save changes</button>
+        </form>
+    </div>
+</div>

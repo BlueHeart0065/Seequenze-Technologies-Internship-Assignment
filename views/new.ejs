@@ -1,0 +1,15 @@
+<% layout('boilerplate') %>
+
+<div class="new-interface">
+    <div class="new-form-card">
+        <a href="/" class="back"><img src="../images/cross.svg" alt=""></a>
+        <h1>Create new Project</h1>
+        <form action="/new" method="post">
+            <label for="title">Name of the project</label>
+            <input type="text" id="title" name="title">
+            <label for="description">Description of the project</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+</div>

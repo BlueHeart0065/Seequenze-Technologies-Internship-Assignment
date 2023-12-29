@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.topbar{
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+}
+
+.topbar-content{
+    margin: 1vw 3vw 1vw auto;
+}
+
+.topbar-text{
+    font-size: 0.8vw;
+    margin-right: 2vw;
+}
+
+.topbar-text p {
+    margin: 0vw 0vw 0vw 0vw;
+}
+
+.topbar-text h3{
+    margin: 0vw;
+}
+
+.topbar-text h3 p{
+    font-size: 0.8vw;
+    margin: 0.17vw 0vw 0vw 0.5vw;
+    font-weight: 400;
+}
+
+.topbar-content img{
+    margin-right: 1vw;
+}
+
