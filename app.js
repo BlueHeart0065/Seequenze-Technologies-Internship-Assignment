@@ -22,8 +22,6 @@ app.use(express.static(path.join(__dirname , 'views')))
 app.use(express.static(path.join(__dirname , 'assets')))
 app.use(methodOverride('_method'))
 
-// mongodb://127.0.0.1:27017/Seequenze_Assignment
-
 mongoose.connect(dbUrl).then(() => {
     console.log('Database connection successfull')
 }).catch(err => {
