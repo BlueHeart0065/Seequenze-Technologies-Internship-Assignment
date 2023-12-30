@@ -74,3 +74,60 @@
     height: 2vw;
     width: 2vw;
 }
+
+.thumbnail{
+    border-radius: 20px;
+    width: 25vw;
+    height: 15vw;
+    margin-bottom: 1vw;
+}
+
+@media only screen and (max-width: 800px){
+
+    .new-form-card , .edit-form-card, .delete-form-card, .view-form-card{
+        width: 70vw;
+        padding: 6vw 10vw 6vw 10vw;
+    }
+
+    .new-form-card h1 , .edit-form-card h1 , .delete-form-card h1 , .view-form-card h1{
+        font-size: 7vw;
+        text-align: center;
+    }
+
+    .new-form-card input , .edit-form-card input , .delete-form-card input, .view-form-card input{
+        margin: 2vw 0vw 2vw 0vw;
+        height: 12vw;
+    }
+
+    .new-form-card textarea , .edit-form-card textarea , .delete-form-card textarea, .view-form-card textarea{
+        margin: 2vw 0vw 2vw 0vw;
+    }
+
+    .new-form-card label , .edit-form-card label , .delete-form-card label , .view-form-card label{
+        margin: 5vw 0vw 3vw 0vw;
+    }
+
+    .new-form-card button , .edit-form-card button , .delete-form-card button , .view-form-card button{
+        padding: 4vw 27vw 4vw 27vw;
+        margin: 5vw auto 5vw auto;
+    }
+
+    .delete-form-card button , .view-form-card button{
+        padding: 5vw 8vw 5vw 8vw;
+        margin: 0vw 3vw 10vw 3vw;
+    }
+
+    .back{
+        left: 65vw;
+    }
+
+    .back img{
+        height: 7vw;
+        width: 7vw;
+    }
+
+    .thumbnail{
+        height: 40vw;
+        width: 70vw;
+    }
+}

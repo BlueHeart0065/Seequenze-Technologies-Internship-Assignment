@@ -16,4 +16,29 @@
     <%- include('./partials/hero')  %>
     <%- body %>
 </body>
+<script>
+
+    function toggleSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        const hero = document.querySelector('.hero');
+        const layout = document.querySelector('.project-layout');
+        sidebar.classList.remove('hide')
+        sidebar.classList.toggle('show');
+        hero.classList.remove('shift-left');
+        hero.classList.toggle('shift-right');
+        layout.classList.remove('expand');
+    }
+
+    function collapseSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        const hero = document.querySelector('.hero');
+        const layout = document.querySelector('.project-layout');
+        sidebar.classList.remove('show');
+        sidebar.classList.toggle('hide');
+        hero.classList.remove('shift-right');
+        hero.classList.toggle('shift-left');
+        layout.classList.toggle('expand');
+    }
+
+</script>
 </html>

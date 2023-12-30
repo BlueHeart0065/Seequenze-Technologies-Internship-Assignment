@@ -6,7 +6,22 @@
     width: 100%;
     position: absolute;
     background-color: white;
-    z-index: -1;
+    z-index: 0;
+}
+
+.topbar-toggle{
+    flex-direction: column;
+    position: absolute;
+    top: 1vw;
+    left: 5vw;
+    cursor: pointer;
+}
+
+.bar{
+    height: 0.3vw;
+    width: 2vw;
+    background-color: black;
+    margin: 0.15vw 0;
 }
 
 .topbar-content{
@@ -18,11 +33,7 @@
     margin-right: 2vw;
 }
 
-.topbar-text p {
-    margin: 0vw 0vw 0vw 0vw;
-}
-
-.topbar-text h3{
+.topbar-text p , .topbar-text h3{
     margin: 0vw;
 }
 
@@ -36,3 +47,35 @@
     margin-right: 1vw;
 }
 
+@media only screen and (max-width : 800px){
+
+    .topbar{
+        padding: 3vw 1vw 3vw 0vw;
+        background-color: #fa792f29;
+    }
+
+    .topbar-text{
+        font-size: 3vw;
+        margin-right: 5vw;
+    }
+
+    .topbar-text h3 p{
+        font-size: 3vw;
+        margin: 0.5vw 0vw 0vw 1vw;
+    }
+
+    .topbar-content img{
+        margin-right: 3vw;
+    }
+
+    .topbar-toggle{
+        top: 4vw;
+        left: 8vw;
+    }
+
+    .bar{
+        height: 1.3vw;
+        width: 8vw;
+        margin: 0.6vw 0;
+    }
+}

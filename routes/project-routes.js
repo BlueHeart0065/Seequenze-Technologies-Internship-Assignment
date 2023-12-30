@@ -10,9 +10,7 @@ router.get('/' , async (req , res) => {
     const projects = await Project.find({});
 
     try{
-        const response = await axios.get('https://picsum.photos/v2/list?page=1&limit=6')
-        const images = response.data;
-        res.render('dashboard', {projects , images})
+        res.render('dashboard', {projects})
     }
     catch(err){
         console.log(err)
@@ -25,9 +23,7 @@ router.get('/new' , async (req , res) => {
     const projects = await Project.find({});
 
     try{
-        const response = await axios.get('https://picsum.photos/v2/list?page=1&limit=6')
-        const images = response.data;
-        res.render('new', {projects , images})
+        res.render('new', {projects})
     }
     catch(err){
         console.log(err)
@@ -36,9 +32,19 @@ router.get('/new' , async (req , res) => {
 
 router.post('/new' , async (req , res) => {
     const {title , description} = req.body;
+
+
+    //API fetch for acquiring images 
+    const response = await fetch('https://picsum.photos/v2/list?page=1&limit=6');
+    const body = await response.json();
+    const imageUrls = body.map(image => image.download_url);
+
+    //Obtain random image from the set of images 
+    const randomIndex = Math.floor(Math.random() * 6);
     const newProject = new Project({
         title : title,
         description : description,
+        thumbnail : imageUrls[randomIndex],
         date : Date()
     })
 
@@ -52,11 +58,9 @@ router.get('/:id/update' , async (req , res) => {
     const projects = await Project.find({});
 
     try{
-        const response = await axios.get('https://picsum.photos/v2/list?page=1&limit=6')
-        const images = response.data;
         const id = req.params.id;
         const project = await Project.findById(id)
-        res.render('edit' , {project , projects , images})
+        res.render('edit' , {project , projects})
     }
     catch(err){
         console.log(err)
@@ -67,10 +71,10 @@ router.get('/:id/update' , async (req , res) => {
 
 router.put('/:id/update' , async (req , res) => {
     const id = req.params.id;
-    const {title , creator} = req.body;
-    const editProject = await Project.findByIdAndUpdate(id , {'title' : title , 'creator' : creator});
+    const {title , description} = req.body;
+    const editProject = await Project.findByIdAndUpdate(id , {'title' : title , 'description' : description});
     await editProject.save();
-    res.redirect('/:id');
+    res.redirect(`/${id}`);
 })
 
 
@@ -81,10 +85,8 @@ router.get('/:id/delete' , async(req , res) => {
     const projects = await Project.find({});
     const id = req.params.id;
     try{
-        const response = await axios.get('https://picsum.photos/v2/list?page=1&limit=6')
-        const images = response.data;
         const project = await Project.findById(id)
-        res.render('delete', {projects , project ,images});
+        res.render('delete', {projects , project});
     }
     catch(err){
         console.log(err)
@@ -105,11 +107,9 @@ router.get('/:id' , async (req , res) => {
     const projects = await Project.find({});
 
     try{
-        const response = await axios.get('https://picsum.photos/v2/list?page=1&limit=6')
         const id = req.params.id;
         const project = await Project.findById(id);
-        const images = response.data;
-        res.render('show', {projects , project ,images})
+        res.render('show', {projects , project})
     }
     catch(err){
         console.log(err)

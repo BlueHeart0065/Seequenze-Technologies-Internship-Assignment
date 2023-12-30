@@ -9,6 +9,15 @@
     height: 100%;
     width: fit-content;
     background-color: white;
+    overflow: hidden;
+}
+
+.sidebar.show{
+    width: fit-content;
+}
+
+.sidebar.hide{
+    width: 0vw;
 }
 
 .logo{
@@ -53,33 +62,33 @@
     margin-right: 0.6vw;
 }
 
-.topBar_toggle{
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar{
-    height: 0.2vw;
-    width: 2vw;
-    background-color: #D1291D;
-    margin: 0.4vw 0;
-    border-radius: 10px;
-}
-
 @media only screen and (max-width : 768px){
 
     *{
         -webkit-tap-highlight-color: transparent;
     }
 
-    .topBar_options.show{
-        opacity: 1;
+    .sidebar{
+        width: 0vw;
     }
 
-    .topBar_toggle{
-        display: flex;
-        margin-left: 43vw;
-        margin-top: 1vw;
+    .logo{
+        width: 25vw;
+        height: 8vw;
+        padding: 10vw;
+    }
+
+    .line{
+        width: 40vw;
+    }
+
+    .sidebar-option{
+        font-size: 4vw;
+    }
+
+    .sidebar-option img{
+        height: 6vw;
+        width: 6vw;
+        margin: 3vw 3vw 0vw 5vw;
     }
 }

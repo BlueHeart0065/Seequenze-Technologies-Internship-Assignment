@@ -5,8 +5,8 @@
         <a href="/" class="back"><img src="../images/cross.svg" alt=""></a>
         <h1>Project details</h1>
         <h3><%= project.title  %></h3>
+        <img src="<%= project.thumbnail%>" alt="" class="thumbnail">
         <p><%= project.description %></p>
-        <img src="<% images.download_url %>" alt="">
         <div style="flex-direction: row;">
             <a href="/<%= project.id  %>/update" style="text-decoration: none;"><button style="background-color: rgb(126, 186, 254); border: none;">Edit Project</button></a>
             <form action="/<%= project.id%>?_method=DELETE" method="post"><button style="background-color: rgb(255, 177, 177); border: none;">Delete project</button></form>

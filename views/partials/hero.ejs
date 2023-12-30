@@ -11,10 +11,9 @@
         </a>
         
         <% for(let project of projects){ %>
-            <% for(let image of images) {%>
                 <div class="card">
                     <a href="/<%= project.id %>">
-                        <img src="<%= image.download_url  %>" alt="">
+                        <img src="<%= project.thumbnail %>" alt="">
                     </a>
                     <div class="project-details">
                         <div style="flex-direction: column;">
@@ -29,6 +28,5 @@
                         <a href="/<%= project.id  %>/delete"><img src="../images/trash.svg" alt=""></a>
                     </div>
                 </div>
-            <% } %>
         <% } %>
     </div>
